@@ -40,7 +40,7 @@ if %errorlevel% neq 0 (
 
 echo [1/2] Iniciando Backend (FastAPI)...
 echo.
-start "ARGO Backend" cmd /k "cd /d %~dp0 && venv\Scripts\activate.bat && python -m uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000"
+start "ARGO Backend" cmd /k "cd /d %~dp0 && venv\Scripts\activate.bat && py -m uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000"
 
 REM Esperar 5 segundos para que el backend inicie
 timeout /t 5 /nobreak >nul
